@@ -5,11 +5,14 @@ import java.io.PrintWriter;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import com.saran.model.User;
 //Controller-> Navigates between your model and view
-@jakarta.servlet.annotation.WebServlet("/login")
+@WebServlet("/login")
 public class LoginController extends HttpServlet{
 
 	protected void doPost(HttpServletRequest req,HttpServletResponse res)
